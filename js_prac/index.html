@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Возведение в степень | Exponentiation</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Возведение в степень | Exponentiation</h1>
+
+    <form id="powerForm" onsubmit="calculatePower(event)">
+      <label for="base">Основание (x):</label>
+      <input type="number" id="base" required />
+
+      <label for="exponent">Степень (n):</label>
+      <input type="number" id="exponent" required />
+
+      <button type="submit">Возвести в степень</button>
+    </form>
+
+    <form id="resultForm" style="display: none">
+      <label>Результат:</label>
+      <div id="result"></div>
+    </form>
+  </body>
+</html>
