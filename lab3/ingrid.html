@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Выбор блюда</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Выбор блюда</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="recept.html">Рецепты</a></li>
+                    <li><a href="ingrid.html">Ингредиенты</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Выберите блюдо</h2>
+                <select id="dishSelect" onchange="showIngredients()">
+                    <option value="">Выберите блюдо</option>
+                    <option value="1">Шарики из креветок</option>
+                    <option value="2">Чунцзянская жареная лапша</option>
+                    <option value="3">Кунпао курица</option>
+                </select>
+            </section>
+            <section id="ingredientsSection">
+                <h2>Ингредиенты</h2>
+                <ul id="ingredientsList">
+                    <li>Выберите блюдо, чтобы увидеть ингредиенты</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2023 Китайская кухня. Все права защищены.</p>
+        </footer>
+    </body>
+</html>
