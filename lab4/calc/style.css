@@ -1,0 +1,70 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+main {
+    text-align: center;
+}
+
+.calc-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px; /* Новая ширина калькулятора */
+}
+
+.screen {
+    background-color: #eee;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em; /* Увеличиваем размер шрифта на экране */
+    padding: 20px; /* Больше внутреннего отступа */
+    text-align: right;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Добавим немного отступов между кнопками */
+    padding: 20px; /* Больше внутреннего отступа */
+}
+
+.digits, .other {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.button {
+    padding: 20px; /* Увеличим размер кнопок */
+    font-size: 1.5em; /* Увеличим размер шрифта кнопок */
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.digit {
+    background-color: #f0f0f0;
+}
+
+.operation {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.result {
+    background-color: #2196f3;
+    color: #fff;
+}
+
+.clear {
+    background-color: #f44336;
+    color: #fff;
+}

@@ -1,0 +1,33 @@
+body {
+    font-family: "Arial", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 5px;
+    margin: 20px;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    font-size: 36px;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
