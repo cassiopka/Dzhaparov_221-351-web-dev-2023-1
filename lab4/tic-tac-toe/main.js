@@ -1,3 +1,4 @@
+// Ожидаем завершения загрузки DOM, затем выполняем функцию.
 document.addEventListener("DOMContentLoaded", function () {
   const board = document.getElementById("board");
   const result = document.getElementById("result");
@@ -5,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentPlayer = "X";
   let gameBoard = ["", "", "", "", "", "", "", "", ""];
 
-  // Create the game board
+  // Создаем игровое поле
   for (let i = 0; i < 9; i++) {
     const cell = document.createElement("div");
     cell.classList.add("cell");
@@ -14,31 +15,39 @@ document.addEventListener("DOMContentLoaded", function () {
     board.appendChild(cell);
   }
 
-  // Handle cell click event
+  // Обрабатываем событие клика по ячейке
   function handleCellClick(event) {
     const index = event.target.dataset.index;
 
+    // Проверяем, что ячейка пуста и игра не завершена
     if (gameBoard[index] === "" && !checkWinner()) {
       gameBoard[index] = currentPlayer;
       event.target.textContent = currentPlayer;
+
+      // Проверяем, есть ли победитель
       if (checkWinner()) {
         result.textContent = `Player ${currentPlayer} wins!`;
-      } else if (gameBoard.every(cell => cell !== "")) {
+      }
+      // Проверяем на ничью
+      else if (gameBoard.every(cell => cell !== "")) {
         result.textContent = "It's a draw!";
-      } else {
+      }
+      // Переключаем текущего игрока
+      else {
         currentPlayer = currentPlayer === "X" ? "O" : "X";
       }
     }
   }
 
-  // Check for a winner
+  // Проверяем наличие победителя
   function checkWinner() {
     const winPatterns = [
-      [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
-      [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
-      [0, 4, 8], [2, 4, 6]             // Diagonals
+      [0, 1, 2], [3, 4, 5], [6, 7, 8], // Ряды
+      [0, 3, 6], [1, 4, 7], [2, 5, 8], // Колонны
+      [0, 4, 8], [2, 4, 6]             // Диагонали
     ];
 
+    // Проверяем все возможные победные комбинации
     for (const pattern of winPatterns) {
       const [a, b, c] = pattern;
       if (gameBoard[a] !== "" && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
@@ -49,11 +58,14 @@ document.addEventListener("DOMContentLoaded", function () {
     return false;
   }
 
-  // Handle restart button click event
+  // Обрабатываем событие клика по кнопке перезапуска
   restartBtn.addEventListener("click", function () {
+    // Сбрасываем состояние игры
     gameBoard = ["", "", "", "", "", "", "", "", ""];
     currentPlayer = "X";
     result.textContent = "";
+
+    // Очищаем содержимое ячеек
     document.querySelectorAll(".cell").forEach(cell => {
       cell.textContent = "";
     });
