@@ -1,0 +1,42 @@
+.navbar {
+    background-image: linear-gradient(
+        to right,
+        #ffd700,
+        #ff8c00
+    );
+}
+
+.navbar-brand {
+    color: #fff; 
+}
+
+.container h1 {
+    color: #4caf50;
+}
+
+.container p.lead {
+    color: #ff4500; 
+}
+
+.container ul {
+    color: #4169e1;
+}
+
+.container form {
+    background-color: #ffd700;
+    padding: 20px;
+}
+
+.form-control {
+    background-color: #fff;
+    color: #333; 
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-primary {
+    background-color: #ff8c00; 
+    border: none;
+}
+
