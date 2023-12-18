@@ -126,7 +126,7 @@ window.onload = function () {
     downloadData();
     document.querySelector('.pagination').onclick = pageBtnHandler;
     document.querySelector('.per-page-btn').onchange = perPageBtnHandler;
-    document.querySelector('.search-form').onsubmit = searchFormHandler; 
+    document.querySelector('.search-form').onsubmit = searchFormHandler;
 };
 
 function searchEntries(query) {

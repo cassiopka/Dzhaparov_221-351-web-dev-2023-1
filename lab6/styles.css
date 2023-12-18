@@ -1,13 +1,9 @@
 .navbar {
-    background-image: linear-gradient(
-        to right,
-        #ffd700,
-        #ff8c00
-    );
+    background-image: linear-gradient(to right, #ffd700, #ff8c00);
 }
 
 .navbar-brand {
-    color: #fff; 
+    color: #fff;
 }
 
 .container h1 {
@@ -15,7 +11,7 @@
 }
 
 .container p.lead {
-    color: #ff4500; 
+    color: #ff4500;
 }
 
 .container ul {
@@ -29,14 +25,13 @@
 
 .form-control {
     background-color: #fff;
-    color: #333; 
+    color: #333;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
 .btn-primary {
-    background-color: #ff8c00; 
+    background-color: #ff8c00;
     border: none;
 }
-
