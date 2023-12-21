@@ -1,0 +1,34 @@
+@media print {
+    header {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    #ingredientsList {
+        list-style-type: decimal;
+    }
+
+    .recipe-card {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .recipe-card img {
+        display: none;
+    }
+
+    h2, h3 {
+        display: none;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+}
