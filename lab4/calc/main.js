@@ -270,7 +270,7 @@ function evaluate(str) {
 // handler for each button separately.
 
 // Навешиваем обработчик события "click" на документ.
-document.clickHandler('click', function (event) {
+document.addEventListener('click', function (event) {
     // Получаем цель события (элемент, на который было совершено нажатие).
     const target = event.target;
 
@@ -333,6 +333,6 @@ function evaluateExpression() {
 
 // Ожидаем полной загрузки окна, затем устанавливаем обработчик события "click".
 window.onload = function () {
-    document.clickHandler('click', clickHandler);
+    document.addEventListener('click', clickHandler);
 };
 
