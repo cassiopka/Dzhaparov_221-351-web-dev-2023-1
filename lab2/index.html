@@ -1,96 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Форма обратной связи</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Форма обратной связи</title>
+</head>
 
-    <body>
-        <header>
-            <div>
-                <a class="btn" href="registr.html">Зарегистрироваться</a>
-            </div>
-            <h1>Форма обратной связи</h1>
-        </header>
+<body>  
+    <header>
+    <div>
+        <a class="btn" href="registr.html">Зарегистрироваться</a>
+    </div> 
+    <h1>Форма обратной связи</h1>
+    </header>  
 
-        <form method="POST" action="http://httpbin.org/post" class="container2">
-            <!-- тэг form - для создания формы
-    атрибут method - определяет метод, по которому будет отправляться форма
-    атрибут action - куда будет отправляться форма-->
+    <form method="POST" action="http://httpbin.org/post" class="container2"> 
+        <div>
+            <label for="fio">ФИО:</label> 
+            <input type="text" id = "fio" placeholder="Иванов Иван Иванович" name="fio">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id = "email" placeholder="ivan@ivanov.ru" name="fio" required>
+        </div>
+
+        <fieldset> <!--этот тэг нужен для группировки связанных друг с другом элементов-->
+            <legend>Как вы о нас узнали?</legend>
             <div>
-                <label for="fio">ФИО:</label>
-                <!-- тэг label создает надписи к элементу формы -->
-                <input
-                    type="text"
-                    id="fio"
-                    placeholder="Иванов Иван Иванович"
-                    name="fio"
-                />
-                <!-- input создает элемент формы, его вид определяется атрибутами-->
-                <!-- type определяет тип отображающегося элемента, здесь - текст -->
-                <!-- id создает индентификатор элемента-->
-                <!-- placeholder используется для примера (серенький текст)-->
-                <!-- name - название, под которым данные будут отправлены на сервер -->
+                <input type="radio" name="source" id="friends">
+                <label for="friends">Друзья</label>
             </div>
             <div>
-                <label for="email">Email:</label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="ivan@ivanov.ru"
-                    name="fio"
-                    required
-                />
-                <!-- reauired - обязательное поле -->
+                <input type="radio" name="source" id="ad">
+                <label for="ad">Реклама</label>
             </div>
+        </fieldset>
 
-            <fieldset>
-                <!--этот тэг нужен для группировки связанных друг с другом элементов-->
-                <legend>Как вы о нас узнали?</legend>
-                <!-- тэг legend задает заголовок для группы элементов-->
-                <div>
-                    <input type="radio" name="source" id="friends" />
-                    <label for="friends">Друзья</label>
-                    <!-- радио-кнопка - выбор из нескольких вариантов-->
-                </div>
-                <div>
-                    <input type="radio" name="source" id="ad" />
-                    <label for="ad">Реклама</label>
-                </div>
-            </fieldset>
+        <div>
+            <label for="feedback_type">Тип обращения</label>
+            <select name="feedback_type" id="feedback_type"> 
+                <option value="1">Жалоба</option>
+                <option value="2">Предложение</option>
+            </select>
+        </div>
+        <div>
+            <label for="text">Текст сообщения</label>
+            <textarea name="text" id="text"></textarea>
+        </div>
 
-            <div>
-                <label for="feedback_type">Тип обращения</label>
-                <select name="feedback_type" id="feedback_type">
-                    <!-- select - выбор из выпадающего списка-->
-                    <option value="1">Жалоба</option>
-                    <!-- option - список-->
-                    <option value="2">Предложение</option>
-                </select>
-            </div>
-            <div>
-                <label for="text">Текст сообщения</label>
-                <textarea name="text" id="text"></textarea>
-                <!-- textarea - большое текстовое поле-->
-            </div>
+        <div>
+            <label for="attachment">Вложение</label>
+            <input type="file" name="attachment" id="attachment">
+        </div>
 
-            <div>
-                <label for="attachment">Вложение</label>
-                <input type="file" name="attachment" id="attachment" />
-            </div>
+        <div>
+            <input type="checkbox" name="agree" id="agree">
+            <label for="agree">Согласен с правилами обработки персональных данных</label>
+        </div>
 
-            <div>
-                <input type="checkbox" name="agree" id="agree" />
-                <label for="agree"
-                    >Согласен с правилами обработки персональных данных</label
-                >
-            </div>
-
-            <button type="submit">Отправить</button>
-            <!-- button - кнопка-->
-            <!-- type="submit" - отправка формы-->
-        </form>
-    </body>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
 </html>
