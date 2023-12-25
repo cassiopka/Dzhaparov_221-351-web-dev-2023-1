@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #F2F5F1;
+    background-color: #f2f5f1;
 }
 
 .header {
@@ -51,7 +51,7 @@ body {
 }
 
 .upvotes {
-    background-image: url('images/upvote_white.png');
+    background-image: url("images/upvote_white.png");
     background-position: left;
     background-size: contain;
     background-repeat: no-repeat;
@@ -95,16 +95,17 @@ body {
 }
 
 .btn:hover {
-    background-color: #F2F5F1;
+    background-color: #f2f5f1;
     color: black;
 }
 
 .active {
-    background-color: #F2F5F1;
+    background-color: #f2f5f1;
     color: black;
 }
 
-.first-page-btn, .last-page-btn {
+.first-page-btn,
+.last-page-btn {
     width: 250px;
 }
 
@@ -141,7 +142,7 @@ body {
 }
 
 .search-btn:hover {
-    background-color: #F2F5F1;
+    background-color: #f2f5f1;
     color: black;
 }
 

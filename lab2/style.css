@@ -1,37 +1,31 @@
-body
-{
+body {
     background-image: url(images/background.jpg);
     background-attachment: fixed;
     background-size: cover;
-    color:aliceblue
+    color: aliceblue;
 }
 
-div
-{
+div {
     margin: 10px auto;
     margin-bottom: 10px;
     font-size: 18px;
 }
 
-h1
-{
+h1 {
     text-align: center;
     font-size: 40px;
 }
 
-fieldset
-{
+fieldset {
     border: none;
 }
 
-form
-{
+form {
     text-align: center;
     margin-left: 15px;
 }
 
-.btn 
-{
+.btn {
     text-decoration: none;
     color: rgb(255, 255, 255);
     border: 2px solid rgb(255, 255, 255);
@@ -42,19 +36,16 @@ form
     background-color: rgb(33, 0, 64);
 }
 
-.btn:hover
-{
+.btn:hover {
     color: rgb(233, 185, 255);
     border-color: rgb(145, 14, 206);
 }
 
-p
-{
+p {
     margin-bottom: 8px;
 }
 
-.container
-{
+.container {
     margin-left: 39.5%;
     background-color: rgb(1, 48, 78, 0.15);
     background-image: url(images/background2.jpg);
@@ -64,7 +55,6 @@ p
     border-style: none;
     padding: 30px;
     border-radius: 5px;
-    width: 200px; 
+    width: 200px;
     height: 200px;
 }
-
